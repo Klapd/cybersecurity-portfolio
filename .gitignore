@@ -1,0 +1,19 @@
+.env
+*.log
+*.bak
+*.old
+*.zip
+*.tar
+*.gz
+
+# keys/certs
+*.key
+*.pem
+*.crt
+id_rsa
+id_rsa.pub
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+.vscode/
