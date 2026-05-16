@@ -1,33 +1,165 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Jake McCarvill Resume</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Jake McCarvill</title>
 
-  <style>
-  body {
-    font-family: Arial;
-  }
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0d1117;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
 
-  h1 {
-    text-align: center;
-  }
-  </style>
+        header {
+            background-color: #161b22;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #30363d;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+            color: #58a6ff;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .nav-button {
+            background-color: #21262d;
+            color: white;
+            border: 1px solid #30363d;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .nav-button:hover {
+            background-color: #30363d;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .resume-card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .resume-card h2 {
+            color: #58a6ff;
+            margin-top: 0;
+            font-size: 32px;
+        }
+
+        .resume-card p {
+            color: #c9d1d9;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .button-row {
+            margin: 25px 0;
+        }
+
+        .resume-button {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #238636;
+            color: white;
+            border: 1px solid #2ea043;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            margin: 8px;
+        }
+
+        .resume-button:hover {
+            background-color: #2ea043;
+        }
+
+        .pdf-container {
+            margin-top: 30px;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #0d1117;
+        }
+
+        iframe {
+            width: 100%;
+            height: 850px;
+            border: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #8b949e;
+            border-top: 1px solid #30363d;
+            margin-top: 40px;
+        }
+    </style>
 </head>
+
 <body>
 
-  <h1>Jake McCarvill Resume</h1>
+    <header>
+        <h1>Jake McCarvill</h1>
 
-  <a href="McCarvill_Resume.pdf" download>
-    Download Resume PDF
-  </a>
+        <nav>
+            <a href="index.html"><button class="nav-button">Home</button></a>
+            <a href="about.html"><button class="nav-button">About</button></a>
+            <a href="projects.html"><button class="nav-button">Projects</button></a>
+            <a href="resume.html"><button class="nav-button">Resume</button></a>
+            <a href="contact.html"><button class="nav-button">Contact</button></a>
+        </nav>
+    </header>
 
-  <br><br>
+    <main>
+        <section class="resume-card">
+            <h2>Resume</h2>
+            <p>
+                View or download my current resume below.
+            </p>
 
-  <iframe 
-    src="McCarvill_Resume.pdf"
-    width="100%"
-    height="800px">
-  </iframe>
+            <div class="button-row">
+                <a class="resume-button" href="McCarvill_Resume.pdf" target="_blank">
+                    View Resume PDF
+                </a>
+
+                <a class="resume-button" href="McCarvill_Resume.pdf" download>
+                    Download Resume PDF
+                </a>
+            </div>
+
+            <div class="pdf-container">
+                <iframe src="McCarvill_Resume.pdf"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jake McCarvill</p>
+    </footer>
 
 </body>
 </html>
