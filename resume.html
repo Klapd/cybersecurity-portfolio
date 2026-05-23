@@ -41,13 +41,15 @@
             color: white;
             border: 1px solid #30363d;
             padding: 12px 24px;
-            border-radius: 8px;
+            border-radius: 10px;
+            font-size: 18px;
             cursor: pointer;
-            font-size: 16px;
+            transition: 0.3s;
         }
 
         .nav-button:hover {
-            background-color: #30363d;
+            background-color: #58a6ff;
+            color: black;
         }
 
         main {
@@ -59,7 +61,7 @@
         .resume-card {
             background-color: #161b22;
             border: 1px solid #30363d;
-            border-radius: 12px;
+            border-radius: 15px;
             padding: 30px;
             text-align: center;
         }
@@ -67,13 +69,13 @@
         .resume-card h2 {
             color: #58a6ff;
             margin-top: 0;
-            font-size: 32px;
+            font-size: 42px;
         }
 
         .resume-card p {
             color: #c9d1d9;
-            font-size: 18px;
-            line-height: 1.6;
+            font-size: 20px;
+            line-height: 1.7;
         }
 
         .button-row {
@@ -83,17 +85,19 @@
         .resume-button {
             display: inline-block;
             text-decoration: none;
-            background-color: #238636;
+            background-color: #21262d;
             color: white;
-            border: 1px solid #2ea043;
+            border: 1px solid #30363d;
             padding: 12px 24px;
-            border-radius: 8px;
-            font-size: 16px;
+            border-radius: 10px;
+            font-size: 18px;
             margin: 8px;
+            transition: 0.3s;
         }
 
         .resume-button:hover {
-            background-color: #2ea043;
+            background-color: #58a6ff;
+            color: black;
         }
 
         .pdf-container {
@@ -114,8 +118,8 @@
             text-align: center;
             padding: 20px;
             color: #8b949e;
-            border-top: 1px solid #30363d;
-            margin-top: 40px;
+            border-top: 2px solid #30363d;
+            margin-top: 100px;
         }
     </style>
 </head>
@@ -126,22 +130,40 @@
         <h1>Jake McCarvill</h1>
 
         <nav>
-            <a href="index.html"><button class="nav-button">Home</button></a>
-            <a href="about.html"><button class="nav-button">About</button></a>
-            <a href="projects.html"><button class="nav-button">Projects</button></a>
-            <a href="resume.html"><button class="nav-button">Resume</button></a>
-            <a href="contact.html"><button class="nav-button">Contact</button></a>
+            <a href="index.html">
+                <button class="nav-button">Home</button>
+            </a>
+
+            <a href="resume.html">
+                <button class="nav-button">Resume</button>
+            </a>
+
+            <a href="projects.html">
+                <button class="nav-button">Projects</button>
+            </a>
+
+            <a href="about.html">
+                <button class="nav-button">About Me</button>
+            </a>
+
+            <a href="contact.html">
+                <button class="nav-button">Contact</button>
+            </a>
         </nav>
     </header>
 
     <main>
+
         <section class="resume-card">
+
             <h2>Resume</h2>
+
             <p>
                 View or download my current resume below.
             </p>
 
             <div class="button-row">
+
                 <a class="resume-button" href="McCarvill_Resume.pdf" target="_blank">
                     View Resume PDF
                 </a>
@@ -149,16 +171,19 @@
                 <a class="resume-button" href="McCarvill_Resume.pdf" download>
                     Download Resume PDF
                 </a>
+
             </div>
 
             <div class="pdf-container">
                 <iframe src="McCarvill_Resume.pdf"></iframe>
             </div>
+
         </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 Jake McCarvill</p>
+        © 2026 Jake McCarvill
     </footer>
 
 </body>
