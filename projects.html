@@ -97,6 +97,13 @@
             font-size: 18px;
         }
 
+        .project-date {
+            color: #8b949e;
+            font-size: 17px;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+
         .project-card ul {
             font-size: 18px;
             line-height: 1.8;
@@ -187,6 +194,7 @@
         <div class="project-card">
 
             <h3>Active Directory Homelab Deployment</h3>
+            <p class="project-date"><strong>Completed:</strong> May 12, 2026</p>
 
             <p>
                 This project documents the deployment and configuration
@@ -229,6 +237,7 @@
         <div class="project-card">
 
             <h3>Linux SSH Brute Force Detection and Triage Using Splunk</h3>
+            <p class="project-date"><strong>Completed:</strong> May 20, 2026</p>
 
             <p>
                 This project demonstrates the creation of a SOC-style monitoring
@@ -260,6 +269,51 @@
                 </a>
 
                 <a href="Splunk_SSH_Brute_Force_Detection_Project.pdf" download>
+                    <button class="nav-button">
+                        Download PDF
+                    </button>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="project-card">
+
+            <h3>Windows Server Event Log Forwarding Using Splunk</h3>
+            <p class="project-date"><strong>Completed:</strong> May 27, 2026</p>
+
+            <p>
+                This project demonstrates centralized Windows event log collection
+                from a Windows Server 2022 virtual machine into Splunk Enterprise
+                using Splunk Universal Forwarder. The lab focused on forwarding
+                Windows security, system, and application logs into a SIEM environment
+                for visibility and analysis.
+            </p>
+
+            <p>
+                The lab included:
+            </p>
+
+            <ul>
+                <li>Splunk Universal Forwarder installation on Windows Server 2022</li>
+                <li>Receiving indexer configuration using TCP port 9997</li>
+                <li>Windows Event Log collection through inputs.conf</li>
+                <li>Security, System, and Application log forwarding</li>
+                <li>Splunk forwarder service restart and validation</li>
+                <li>Windows event log ingestion verification in Splunk Enterprise</li>
+                <li>Foundational SIEM and Windows monitoring workflow</li>
+            </ul>
+
+            <div class="project-buttons">
+
+                <a href="Splunk Windows Server Forwarding Lab.pdf" target="_blank">
+                    <button class="nav-button">
+                        View PDF
+                    </button>
+                </a>
+
+                <a href="Splunk Windows Server Forwarding Lab.pdf" download>
                     <button class="nav-button">
                         Download PDF
                     </button>
