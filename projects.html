@@ -108,6 +108,7 @@
             font-size: 18px;
             line-height: 1.8;
             color: #c9d1d9;
+            padding-left: 25px;
         }
 
         .project-buttons {
@@ -124,6 +125,108 @@
             margin-top: 100px;
             color: #8b949e;
         }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 18px 10px;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            nav a {
+                margin: 0;
+            }
+
+            .nav-button {
+                font-size: 15px;
+                padding: 10px 16px;
+            }
+
+            .content {
+                padding: 35px 15px;
+            }
+
+            .content h2 {
+                font-size: 34px;
+            }
+
+            .content p {
+                font-size: 17px;
+            }
+
+            .project-card {
+                padding: 22px 16px;
+                margin-top: 35px;
+                border-radius: 12px;
+            }
+
+            .project-card h3 {
+                font-size: 24px;
+            }
+
+            .project-card p {
+                font-size: 16px;
+            }
+
+            .project-date {
+                font-size: 15px;
+                margin-top: -5px;
+            }
+
+            .project-card ul {
+                font-size: 16px;
+                line-height: 1.7;
+                padding-left: 20px;
+            }
+
+            .project-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .project-buttons a {
+                width: 100%;
+            }
+
+            .project-buttons .nav-button {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            footer {
+                margin-top: 60px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            .nav-button {
+                font-size: 14px;
+                padding: 9px 13px;
+            }
+
+            .content h2 {
+                font-size: 30px;
+            }
+
+            .project-card h3 {
+                font-size: 22px;
+            }
+        }
     </style>
 </head>
 
@@ -133,25 +236,11 @@
         <h1>Jake McCarvill</h1>
 
         <nav>
-            <a href="index.html">
-                <button class="nav-button">Home</button>
-            </a>
-
-            <a href="resume.html">
-                <button class="nav-button">Resume</button>
-            </a>
-
-            <a href="projects.html">
-                <button class="nav-button">Projects</button>
-            </a>
-
-            <a href="about.html">
-                <button class="nav-button">About Me</button>
-            </a>
-
-            <a href="contact.html">
-                <button class="nav-button">Contact</button>
-            </a>
+            <a href="index.html"><button class="nav-button">Home</button></a>
+            <a href="resume.html"><button class="nav-button">Resume</button></a>
+            <a href="projects.html"><button class="nav-button">Projects</button></a>
+            <a href="about.html"><button class="nav-button">About Me</button></a>
+            <a href="contact.html"><button class="nav-button">Contact</button></a>
         </nav>
     </header>
 
@@ -166,7 +255,6 @@
         </p>
 
         <div class="project-card">
-
             <h3>Personal Portfolio Website</h3>
 
             <p>
@@ -176,9 +264,7 @@
                 Linux administration, Docker, networking, and website development.
             </p>
 
-            <p>
-                Future updates will include:
-            </p>
+            <p>Future updates will include:</p>
 
             <ul>
                 <li>Cybersecurity home lab documentation</li>
@@ -188,11 +274,9 @@
                 <li>Networking and firewall projects</li>
                 <li>Security monitoring and SIEM projects</li>
             </ul>
-
         </div>
 
         <div class="project-card">
-
             <h3>Active Directory Homelab Deployment</h3>
             <p class="project-date"><strong>Completed:</strong> May 12, 2026</p>
 
@@ -202,9 +286,7 @@
                 Windows Server 2022 within a VMware homelab environment.
             </p>
 
-            <p>
-                The lab included:
-            </p>
+            <p>The lab included:</p>
 
             <ul>
                 <li>Windows Server 2022 installation</li>
@@ -217,25 +299,17 @@
             </ul>
 
             <div class="project-buttons">
-
                 <a href="Active_Directory_Setup.pdf" target="_blank">
-                    <button class="nav-button">
-                        View PDF
-                    </button>
+                    <button class="nav-button">View PDF</button>
                 </a>
 
                 <a href="Active_Directory_Setup.pdf" download>
-                    <button class="nav-button">
-                        Download PDF
-                    </button>
+                    <button class="nav-button">Download PDF</button>
                 </a>
-
             </div>
-
         </div>
 
         <div class="project-card">
-
             <h3>Linux SSH Brute Force Detection and Triage Using Splunk</h3>
             <p class="project-date"><strong>Completed:</strong> May 20, 2026</p>
 
@@ -246,9 +320,7 @@
                 and forwarded into Splunk for detection, alerting, and triage analysis.
             </p>
 
-            <p>
-                The lab included:
-            </p>
+            <p>The lab included:</p>
 
             <ul>
                 <li>Splunk Enterprise deployment in Docker</li>
@@ -261,25 +333,17 @@
             </ul>
 
             <div class="project-buttons">
-
                 <a href="Splunk_SSH_Brute_Force_Detection_Project.pdf" target="_blank">
-                    <button class="nav-button">
-                        View PDF
-                    </button>
+                    <button class="nav-button">View PDF</button>
                 </a>
 
                 <a href="Splunk_SSH_Brute_Force_Detection_Project.pdf" download>
-                    <button class="nav-button">
-                        Download PDF
-                    </button>
+                    <button class="nav-button">Download PDF</button>
                 </a>
-
             </div>
-
         </div>
 
         <div class="project-card">
-
             <h3>Windows Server Event Log Forwarding Using Splunk</h3>
             <p class="project-date"><strong>Completed:</strong> May 27, 2026</p>
 
@@ -291,9 +355,7 @@
                 for visibility and analysis.
             </p>
 
-            <p>
-                The lab included:
-            </p>
+            <p>The lab included:</p>
 
             <ul>
                 <li>Splunk Universal Forwarder installation on Windows Server 2022</li>
@@ -306,21 +368,14 @@
             </ul>
 
             <div class="project-buttons">
-
                 <a href="Splunk Windows Server Forwarding Lab.pdf" target="_blank">
-                    <button class="nav-button">
-                        View PDF
-                    </button>
+                    <button class="nav-button">View PDF</button>
                 </a>
 
                 <a href="Splunk Windows Server Forwarding Lab.pdf" download>
-                    <button class="nav-button">
-                        Download PDF
-                    </button>
+                    <button class="nav-button">Download PDF</button>
                 </a>
-
             </div>
-
         </div>
 
     </section>
