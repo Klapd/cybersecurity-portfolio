@@ -114,12 +114,121 @@
             border: none;
         }
 
+        .mobile-resume-note {
+            display: none;
+            margin-top: 25px;
+            background-color: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .mobile-resume-note p {
+            font-size: 17px;
+            line-height: 1.6;
+            margin: 0;
+            color: #c9d1d9;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
             color: #8b949e;
             border-top: 2px solid #30363d;
             margin-top: 100px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 18px 10px;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            nav a {
+                margin: 0;
+            }
+
+            .nav-button {
+                font-size: 15px;
+                padding: 10px 16px;
+            }
+
+            main {
+                margin: 25px auto;
+                padding: 15px;
+            }
+
+            .resume-card {
+                padding: 22px 16px;
+                border-radius: 12px;
+            }
+
+            .resume-card h2 {
+                font-size: 34px;
+            }
+
+            .resume-card p {
+                font-size: 17px;
+            }
+
+            .button-row {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                margin: 22px 0;
+            }
+
+            .resume-button {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                margin: 0;
+                font-size: 16px;
+                padding: 13px 18px;
+            }
+
+            .pdf-container {
+                display: none;
+            }
+
+            .mobile-resume-note {
+                display: block;
+            }
+
+            footer {
+                margin-top: 60px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            .nav-button {
+                font-size: 14px;
+                padding: 9px 13px;
+            }
+
+            .resume-card h2 {
+                font-size: 30px;
+            }
+
+            .resume-card p {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -172,6 +281,13 @@
                     Download Resume PDF
                 </a>
 
+            </div>
+
+            <div class="mobile-resume-note">
+                <p>
+                    For the best mobile viewing experience, open the resume PDF in a new tab
+                    or download it directly using the buttons above.
+                </p>
             </div>
 
             <div class="pdf-container">
