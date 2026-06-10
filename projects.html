@@ -72,6 +72,67 @@
             text-align: center;
         }
 
+        .search-box {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 35px;
+            margin-bottom: 20px;
+        }
+
+        .search-box h3 {
+            color: #58a6ff;
+            margin-top: 0;
+            font-size: 26px;
+            text-align: center;
+        }
+
+        .search-box p {
+            font-size: 17px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #projectSearch {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #30363d;
+            background-color: #0d1117;
+            color: white;
+            font-size: 18px;
+            outline: none;
+        }
+
+        #projectSearch:focus {
+            border-color: #58a6ff;
+        }
+
+        #resultCount {
+            color: #8b949e;
+            font-size: 16px;
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .skill-tag {
+            background-color: #21262d;
+            color: #c9d1d9;
+            border: 1px solid #30363d;
+            border-radius: 999px;
+            padding: 8px 13px;
+            font-size: 15px;
+        }
+
         .project-card {
             background-color: #161b22;
             border: 1px solid #30363d;
@@ -116,6 +177,14 @@
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
+        }
+
+        .no-results {
+            display: none;
+            text-align: center;
+            color: #8b949e;
+            font-size: 20px;
+            margin-top: 40px;
         }
 
         footer {
@@ -254,7 +323,24 @@
             I am actively building hands-on experience and documenting my work here.
         </p>
 
-        <div class="project-card">
+        <div class="search-box">
+            <h3>Search Projects by Skill</h3>
+            <p>
+                Search for keywords like Splunk, Docker, Linux, Active Directory,
+                Windows Server, SIEM, SSH, DNS, or log analysis.
+            </p>
+
+            <input 
+                type="text" 
+                id="projectSearch" 
+                placeholder="Search projects or skills..."
+                onkeyup="filterProjects()"
+            >
+
+            <div id="resultCount"></div>
+        </div>
+
+        <div class="project-card" data-skills="portfolio website apache ubuntu docker linux web hosting html css networking server administration">
             <h3>Personal Portfolio Website</h3>
 
             <p>
@@ -263,6 +349,18 @@
                 The site is being built entirely by me as a way to learn web hosting,
                 Linux administration, Docker, networking, and website development.
             </p>
+
+            <p>Skills learned:</p>
+
+            <div class="skill-tags">
+                <span class="skill-tag">Apache</span>
+                <span class="skill-tag">Ubuntu</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Linux Administration</span>
+                <span class="skill-tag">Web Hosting</span>
+                <span class="skill-tag">HTML/CSS</span>
+                <span class="skill-tag">Basic Networking</span>
+            </div>
 
             <p>Future updates will include:</p>
 
@@ -276,7 +374,7 @@
             </ul>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-skills="active directory windows server 2022 domain controller dns group policy gpo organizational units ou user accounts windows 11 vmware homelab system administration">
             <h3>Active Directory Homelab Deployment</h3>
             <p class="project-date"><strong>Completed:</strong> May 12, 2026</p>
 
@@ -298,6 +396,18 @@
                 <li>Windows 11 domain testing</li>
             </ul>
 
+            <p>Skills learned:</p>
+
+            <div class="skill-tags">
+                <span class="skill-tag">Active Directory</span>
+                <span class="skill-tag">Windows Server 2022</span>
+                <span class="skill-tag">Domain Controllers</span>
+                <span class="skill-tag">DNS</span>
+                <span class="skill-tag">OU Management</span>
+                <span class="skill-tag">User Account Management</span>
+                <span class="skill-tag">VMware Homelab</span>
+            </div>
+
             <div class="project-buttons">
                 <a href="Active_Directory_Setup.pdf" target="_blank">
                     <button class="nav-button">View PDF</button>
@@ -309,7 +419,7 @@
             </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-skills="splunk linux ubuntu ssh brute force detection triage siem soc alerting docker authentication logs spl queries security monitoring">
             <h3>Linux SSH Brute Force Detection and Triage Using Splunk</h3>
             <p class="project-date"><strong>Completed:</strong> May 20, 2026</p>
 
@@ -332,6 +442,18 @@
                 <li>SOC-style investigation workflow</li>
             </ul>
 
+            <p>Skills learned:</p>
+
+            <div class="skill-tags">
+                <span class="skill-tag">Splunk</span>
+                <span class="skill-tag">Linux Logs</span>
+                <span class="skill-tag">SSH Brute Force Detection</span>
+                <span class="skill-tag">SPL Queries</span>
+                <span class="skill-tag">Alert Creation</span>
+                <span class="skill-tag">SOC Triage</span>
+                <span class="skill-tag">Docker</span>
+            </div>
+
             <div class="project-buttons">
                 <a href="Splunk_SSH_Brute_Force_Detection_Project.pdf" target="_blank">
                     <button class="nav-button">View PDF</button>
@@ -343,7 +465,7 @@
             </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-skills="splunk windows server event logs universal forwarder siem tcp 9997 inputs.conf security logs system logs application logs log forwarding monitoring">
             <h3>Windows Server Event Log Forwarding Using Splunk</h3>
             <p class="project-date"><strong>Completed:</strong> May 27, 2026</p>
 
@@ -367,6 +489,18 @@
                 <li>Foundational SIEM and Windows monitoring workflow</li>
             </ul>
 
+            <p>Skills learned:</p>
+
+            <div class="skill-tags">
+                <span class="skill-tag">Splunk Universal Forwarder</span>
+                <span class="skill-tag">Windows Event Logs</span>
+                <span class="skill-tag">SIEM Log Forwarding</span>
+                <span class="skill-tag">Windows Server 2022</span>
+                <span class="skill-tag">inputs.conf</span>
+                <span class="skill-tag">TCP 9997</span>
+                <span class="skill-tag">Security Monitoring</span>
+            </div>
+
             <div class="project-buttons">
                 <a href="Splunk Windows Server Forwarding Lab.pdf" target="_blank">
                     <button class="nav-button">View PDF</button>
@@ -378,11 +512,46 @@
             </div>
         </div>
 
+        <p class="no-results" id="noResults">
+            No projects matched your search.
+        </p>
+
     </section>
 
     <footer>
         © 2026 Jake McCarvill
     </footer>
+
+    <script>
+        function filterProjects() {
+            const searchInput = document.getElementById("projectSearch").value.toLowerCase();
+            const projectCards = document.querySelectorAll(".project-card");
+            const noResults = document.getElementById("noResults");
+            const resultCount = document.getElementById("resultCount");
+
+            let visibleCount = 0;
+
+            projectCards.forEach(card => {
+                const cardText = card.innerText.toLowerCase();
+                const cardSkills = card.getAttribute("data-skills").toLowerCase();
+
+                if (cardText.includes(searchInput) || cardSkills.includes(searchInput)) {
+                    card.style.display = "block";
+                    visibleCount++;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            if (searchInput === "") {
+                resultCount.textContent = "";
+                noResults.style.display = "none";
+            } else {
+                resultCount.textContent = visibleCount + " project(s) found";
+                noResults.style.display = visibleCount === 0 ? "block" : "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
