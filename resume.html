@@ -58,7 +58,8 @@
             padding: 20px;
         }
 
-        .resume-card {
+        .resume-card,
+        .certifications-card {
             background-color: #161b22;
             border: 1px solid #30363d;
             border-radius: 15px;
@@ -66,13 +67,19 @@
             text-align: center;
         }
 
-        .resume-card h2 {
+        .certifications-card {
+            margin-top: 40px;
+        }
+
+        .resume-card h2,
+        .certifications-card h2 {
             color: #58a6ff;
             margin-top: 0;
             font-size: 42px;
         }
 
-        .resume-card p {
+        .resume-card p,
+        .certifications-card p {
             color: #c9d1d9;
             font-size: 20px;
             line-height: 1.7;
@@ -130,6 +137,98 @@
             color: #c9d1d9;
         }
 
+        .cert-section {
+            margin-top: 45px;
+            text-align: left;
+        }
+
+        .cert-section h3 {
+            color: #58a6ff;
+            font-size: 28px;
+            margin-bottom: 22px;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 10px;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .cert-card {
+            background-color: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 430px;
+        }
+
+        .cert-image-box,
+        .cert-pdf-preview {
+            height: 220px;
+            background-color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-bottom: 18px;
+        }
+
+        .cert-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .cert-pdf-preview iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .cert-card h4 {
+            color: white;
+            font-size: 21px;
+            margin: 10px 0;
+        }
+
+        .cert-card p {
+            color: #c9d1d9;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 8px 0 15px;
+        }
+
+        .cert-actions {
+            margin-top: auto;
+            padding-top: 12px;
+        }
+
+        .small-button {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #21262d;
+            color: white;
+            border: 1px solid #30363d;
+            padding: 9px 14px;
+            border-radius: 8px;
+            font-size: 15px;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        .small-button:hover {
+            background-color: #58a6ff;
+            color: black;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -169,16 +268,19 @@
                 padding: 15px;
             }
 
-            .resume-card {
+            .resume-card,
+            .certifications-card {
                 padding: 22px 16px;
                 border-radius: 12px;
             }
 
-            .resume-card h2 {
+            .resume-card h2,
+            .certifications-card h2 {
                 font-size: 34px;
             }
 
-            .resume-card p {
+            .resume-card p,
+            .certifications-card p {
                 font-size: 17px;
             }
 
@@ -206,6 +308,18 @@
                 display: block;
             }
 
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cert-card {
+                min-height: auto;
+            }
+
+            .cert-section h3 {
+                font-size: 24px;
+            }
+
             footer {
                 margin-top: 60px;
                 font-size: 14px;
@@ -222,11 +336,13 @@
                 padding: 9px 13px;
             }
 
-            .resume-card h2 {
+            .resume-card h2,
+            .certifications-card h2 {
                 font-size: 30px;
             }
 
-            .resume-card p {
+            .resume-card p,
+            .certifications-card p {
                 font-size: 16px;
             }
         }
@@ -239,25 +355,11 @@
         <h1>Jake McCarvill</h1>
 
         <nav>
-            <a href="index.html">
-                <button class="nav-button">Home</button>
-            </a>
-
-            <a href="resume.html">
-                <button class="nav-button">Resume</button>
-            </a>
-
-            <a href="projects.html">
-                <button class="nav-button">Projects</button>
-            </a>
-
-            <a href="about.html">
-                <button class="nav-button">About Me</button>
-            </a>
-
-            <a href="contact.html">
-                <button class="nav-button">Contact</button>
-            </a>
+            <a href="index.html"><button class="nav-button">Home</button></a>
+            <a href="resume.html"><button class="nav-button">Resume</button></a>
+            <a href="projects.html"><button class="nav-button">Projects</button></a>
+            <a href="about.html"><button class="nav-button">About Me</button></a>
+            <a href="contact.html"><button class="nav-button">Contact</button></a>
         </nav>
     </header>
 
@@ -267,20 +369,12 @@
 
             <h2>Resume</h2>
 
-            <p>
-                View or download my current resume below.
-            </p>
+            <p>View or download my current resume below.</p>
 
             <div class="button-row">
-
-                <a class="resume-button" href="McCarvill_Resume.pdf?v=2" target="_blank">
-                    View Resume PDF
-                </a>
-
-                <a class="resume-button" href="McCarvill_Resume.pdf" download>
-                    Download Resume PDF
-                </a>
-
+                <a class="resume-button" href="McCarvill_Resume.pdf?v=2" target="_blank">View Resume PDF</a>
+                <a class="resume-button" href="McCarvill_Resume.pdf" download>Download Resume PDF</a>
+                <a class="resume-button" href="#certifications">View Certifications</a>
             </div>
 
             <div class="mobile-resume-note">
@@ -292,6 +386,190 @@
 
             <div class="pdf-container">
                 <iframe src="McCarvill_Resume.pdf?v=2"></iframe>
+            </div>
+
+        </section>
+
+        <section class="certifications-card" id="certifications">
+
+            <h2>Certifications</h2>
+
+            <p>
+                Below are my current cybersecurity, networking, SIEM, and hands-on training certifications.
+            </p>
+
+            <div class="cert-section">
+                <h3>Industry Certifications</h3>
+
+                <div class="cert-grid">
+
+                    <div class="cert-card">
+                        <div>
+                            <div class="cert-pdf-preview">
+                                <iframe src="Certifications/McCarvill_CompTIA_Sec+.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+                            </div>
+
+                            <h4>CompTIA Security+</h4>
+                            <p>Issued: September 30, 2025<br>Expires: September 30, 2028</p>
+                        </div>
+
+                        <div class="cert-actions">
+                            <a class="small-button" href="Certifications/McCarvill_CompTIA_Sec+.pdf" target="_blank">View</a>
+                            <a class="small-button" href="Certifications/McCarvill_CompTIA_Sec+.pdf" download>Download</a>
+                            <a class="small-button" href="https://www.credly.com/badges/a5861238-a2bf-45ad-8db6-dd050e1c91e0/linked_in_profile" target="_blank">Verify Credential</a>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div>
+                            <div class="cert-image-box">
+                                <img src="Certifications/McCarvill_TestOut_Network_Pro.jpg" alt="TestOut Network Pro Certification">
+                            </div>
+
+                            <h4>TestOut Network Pro</h4>
+                            <p>Issued: April 2023<br>Expires: Never</p>
+                        </div>
+
+                        <div class="cert-actions">
+                            <a class="small-button" href="Certifications/McCarvill_TestOut_Network_Pro.jpg" target="_blank">View</a>
+                            <a class="small-button" href="Certifications/McCarvill_TestOut_Network_Pro.jpg" download>Download</a>
+                            <a class="small-button" href="https://certification.platform.comptia.org/verifycert/6-2C6-V3VXAW" target="_blank">Verify Credential</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="cert-section">
+                <h3>Splunk Training</h3>
+
+                <div class="cert-grid">
+
+                    <div class="cert-card">
+                        <div>
+                            <div class="cert-image-box">
+                                <img src="Certifications/McCarvill_Intro_to_Splunk.jpg" alt="Intro to Splunk Certificate">
+                            </div>
+
+                            <h4>Intro to Splunk</h4>
+                            <p>Issued: June 4, 2026</p>
+                        </div>
+
+                        <div class="cert-actions">
+                            <a class="small-button" href="Certifications/McCarvill_Intro_to_Splunk.jpg" target="_blank">View</a>
+                            <a class="small-button" href="Certifications/McCarvill_Intro_to_Splunk.jpg" download>Download</a>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div>
+                            <div class="cert-image-box">
+                                <img src="Certifications/McCarvill_Intro_Splunk_SOAR.jpg" alt="Introduction to Splunk SOAR Certificate">
+                            </div>
+
+                            <h4>Introduction to Splunk SOAR</h4>
+                            <p>Issued: June 4, 2026</p>
+                        </div>
+
+                        <div class="cert-actions">
+                            <a class="small-button" href="Certifications/McCarvill_Intro_Splunk_SOAR.jpg" target="_blank">View</a>
+                            <a class="small-button" href="Certifications/McCarvill_Intro_Splunk_SOAR.jpg" download>Download</a>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div>
+                            <div class="cert-image-box">
+                                <img src="Certifications/McCarvill_SPL2_Fundamentals.jpg" alt="Learning SPL2 Fundamentals Certificate">
+                            </div>
+
+                            <h4>Learning SPL2 Fundamentals</h4>
+                            <p>Issued: June 6, 2026</p>
+                        </div>
+
+                        <div class="cert-actions">
+                            <a class="small-button" href="Certifications/McCarvill_SPL2_Fundamentals.jpg" target="_blank">View</a>
+                            <a class="small-button" href="Certifications/McCarvill_SPL2_Fundamentals.jpg" download>Download</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="cert-section">
+                <h3>RangeForce Badges</h3>
+
+                <div class="cert-grid">
+
+                    <div class="cert-card">
+                        <div>
+                            <div class="cert-image-box">
+                                <img src="Certifications/McCarvill_Junior_SOC_Analyst1_Elite.png" alt="RangeForce Junior SOC Analyst 1 Elite Badge">
+                            </div>
+
+                            <h4>Junior SOC Analyst 1 Elite</h4>
+                            <p>Issued: May 3, 2025<br>Expires: May 3, 2029</p>
+                        </div>
+
+                        <div class="cert-actions">
+                            <a class="small-button" href="Certifications/McCarvill_Junior_SOC_Analyst1_Elite.png" target="_blank">View</a>
+                            <a class="small-button" href="Certifications/McCarvill_Junior_SOC_Analyst1_Elite.png" download>Download</a>
+                            <a class="small-button" href="https://www.virtualbadge.io/certificate-validator?credential=b5cc3b96-58f4-4b84-8d78-3da52612351d" target="_blank">Verify Credential</a>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div>
+                            <div class="cert-image-box">
+                                <img src="Certifications/McCarvill_Cyber_Foundations_Elite.png" alt="RangeForce Cybersecurity Foundations Elite Badge">
+                            </div>
+
+                            <h4>Cybersecurity Foundations Elite</h4>
+                            <p>Issued: April 7, 2025<br>Expires: April 7, 2029</p>
+                        </div>
+
+                        <div class="cert-actions">
+                            <a class="small-button" href="Certifications/McCarvill_Cyber_Foundations_Elite.png" target="_blank">View</a>
+                            <a class="small-button" href="Certifications/McCarvill_Cyber_Foundations_Elite.png" download>Download</a>
+                            <a class="small-button" href="https://www.virtualbadge.io/certificate-validator?credential=22f5bd16-c78a-4a53-b615-671664fa8434" target="_blank">Verify Credential</a>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div>
+                            <div class="cert-image-box">
+                                <img src="Certifications/McCarvill_Microsoft_Security_Core_Elite.png" alt="RangeForce Microsoft Security Core Elite Badge">
+                            </div>
+
+                            <h4>Microsoft Security Core Elite</h4>
+                            <p>Issued: April 16, 2025<br>Expires: April 16, 2029</p>
+                        </div>
+
+                        <div class="cert-actions">
+                            <a class="small-button" href="Certifications/McCarvill_Microsoft_Security_Core_Elite.png" target="_blank">View</a>
+                            <a class="small-button" href="Certifications/McCarvill_Microsoft_Security_Core_Elite.png" download>Download</a>
+                            <a class="small-button" href="https://www.virtualbadge.io/certificate-validator?credential=c2fababa-701d-4c34-90bb-7fc9c148531c" target="_blank">Verify Credential</a>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div>
+                            <div class="cert-image-box">
+                                <img src="Certifications/McCarvill_Pentester_Elite.png" alt="RangeForce Penetration Tester Elite Badge">
+                            </div>
+
+                            <h4>Penetration Tester Elite</h4>
+                            <p>Issued: December 12, 2025<br>Expires: December 12, 2029</p>
+                        </div>
+
+                        <div class="cert-actions">
+                            <a class="small-button" href="Certifications/McCarvill_Pentester_Elite.png" target="_blank">View</a>
+                            <a class="small-button" href="Certifications/McCarvill_Pentester_Elite.png" download>Download</a>
+                            <a class="small-button" href="https://www.virtualbadge.io/certificate-validator?credential=66afd1dc-f1eb-4948-b34a-d63367bb3424" target="_blank">Verify Credential</a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
         </section>
