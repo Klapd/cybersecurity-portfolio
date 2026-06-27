@@ -301,257 +301,308 @@
 
 <body>
 
-    <header>
-        <h1>Jake McCarvill</h1>
+<header>
+    <h1>Jake McCarvill</h1>
 
-        <nav>
-            <a href="index.html"><button class="nav-button">Home</button></a>
-            <a href="resume.html"><button class="nav-button">Resume</button></a>
-            <a href="projects.html"><button class="nav-button">Projects</button></a>
-            <a href="about.html"><button class="nav-button">About Me</button></a>
-            <a href="contact.html"><button class="nav-button">Contact</button></a>
-        </nav>
-    </header>
+    <nav>
+        <a href="index.html"><button class="nav-button">Home</button></a>
+        <a href="resume.html"><button class="nav-button">Resume</button></a>
+        <a href="projects.html"><button class="nav-button">Projects</button></a>
+        <a href="about.html"><button class="nav-button">About Me</button></a>
+        <a href="contact.html"><button class="nav-button">Contact</button></a>
+    </nav>
+</header>
 
-    <section class="content">
+<section class="content">
 
-        <h2>Projects</h2>
+    <h2>Projects</h2>
 
+    <p>
+        This page will continue to grow as I complete more cybersecurity,
+        networking, Linux, Docker, and home lab projects.
+        I am actively building hands-on experience and documenting my work here.
+    </p>
+
+    <div class="search-box">
+        <h3>Search Projects by Skill</h3>
         <p>
-            This page will continue to grow as I complete more cybersecurity,
-            networking, Linux, Docker, and home lab projects.
-            I am actively building hands-on experience and documenting my work here.
+            Search for keywords like Splunk, Docker, Linux, Active Directory,
+            Windows Server, SIEM, SSH, DNS, or log analysis.
         </p>
 
-        <div class="search-box">
-            <h3>Search Projects by Skill</h3>
-            <p>
-                Search for keywords like Splunk, Docker, Linux, Active Directory,
-                Windows Server, SIEM, SSH, DNS, or log analysis.
-            </p>
-
-            <input 
-                type="text" 
-                id="projectSearch" 
+        <input
+                type="text"
+                id="projectSearch"
                 placeholder="Search projects or skills..."
                 onkeyup="filterProjects()"
-            >
+        >
 
-            <div id="resultCount"></div>
-        </div>
+        <div id="resultCount"></div>
+    </div>
 
-        <div class="project-card" data-skills="portfolio website apache ubuntu docker linux web hosting html css networking server administration">
-            <h3>Personal Portfolio Website</h3>
+    <div class="project-card" data-skills="portfolio website apache ubuntu docker linux web hosting html css networking server administration">
+        <h3>Personal Portfolio Website</h3>
 
-            <p>
-                This website is my first personal web project.
-                It is hosted from my Ubuntu home server using Apache inside Docker containers.
-                The site is being built entirely by me as a way to learn web hosting,
-                Linux administration, Docker, networking, and website development.
-            </p>
-
-            <p>Skills learned:</p>
-
-            <div class="skill-tags">
-                <span class="skill-tag">Apache</span>
-                <span class="skill-tag">Ubuntu</span>
-                <span class="skill-tag">Docker</span>
-                <span class="skill-tag">Linux Administration</span>
-                <span class="skill-tag">Web Hosting</span>
-                <span class="skill-tag">HTML/CSS</span>
-                <span class="skill-tag">Basic Networking</span>
-            </div>
-
-            <p>Future updates will include:</p>
-
-            <ul>
-                <li>Cybersecurity home lab documentation</li>
-                <li>Docker container projects</li>
-                <li>Minecraft server hosting</li>
-                <li>Linux server management</li>
-                <li>Networking and firewall projects</li>
-                <li>Security monitoring and SIEM projects</li>
-            </ul>
-        </div>
-
-        <div class="project-card" data-skills="active directory windows server 2022 domain controller dns group policy gpo organizational units ou user accounts windows 11 vmware homelab system administration">
-            <h3>Active Directory Homelab Deployment</h3>
-            <p class="project-date"><strong>Completed:</strong> May 12, 2026</p>
-
-            <p>
-                This project documents the deployment and configuration
-                of Active Directory Domain Services (AD DS) using
-                Windows Server 2022 within a VMware homelab environment.
-            </p>
-
-            <p>The lab included:</p>
-
-            <ul>
-                <li>Windows Server 2022 installation</li>
-                <li>Active Directory Domain Services (AD DS)</li>
-                <li>Domain Controller promotion</li>
-                <li>DNS configuration</li>
-                <li>Organizational Unit (OU) management</li>
-                <li>User account creation</li>
-                <li>Windows 11 domain testing</li>
-            </ul>
-
-            <p>Skills learned:</p>
-
-            <div class="skill-tags">
-                <span class="skill-tag">Active Directory</span>
-                <span class="skill-tag">Windows Server 2022</span>
-                <span class="skill-tag">Domain Controllers</span>
-                <span class="skill-tag">DNS</span>
-                <span class="skill-tag">OU Management</span>
-                <span class="skill-tag">User Account Management</span>
-                <span class="skill-tag">VMware Homelab</span>
-            </div>
-
-            <div class="project-buttons">
-                <a href="Active_Directory_Setup.pdf" target="_blank">
-                    <button class="nav-button">View PDF</button>
-                </a>
-
-                <a href="Active_Directory_Setup.pdf" download>
-                    <button class="nav-button">Download PDF</button>
-                </a>
-            </div>
-        </div>
-
-        <div class="project-card" data-skills="splunk linux ubuntu ssh brute force detection triage siem soc alerting docker authentication logs spl queries security monitoring">
-            <h3>Linux SSH Brute Force Detection and Triage Using Splunk</h3>
-            <p class="project-date"><strong>Completed:</strong> May 20, 2026</p>
-
-            <p>
-                This project demonstrates the creation of a SOC-style monitoring
-                workflow using Splunk Enterprise and Ubuntu Linux.
-                Failed SSH authentication attempts were intentionally generated
-                and forwarded into Splunk for detection, alerting, and triage analysis.
-            </p>
-
-            <p>The lab included:</p>
-
-            <ul>
-                <li>Splunk Enterprise deployment in Docker</li>
-                <li>Linux authentication log ingestion</li>
-                <li>SSH brute force attack simulation</li>
-                <li>Custom SPL detection queries</li>
-                <li>Real-time alert configuration</li>
-                <li>Security event triage and analysis</li>
-                <li>SOC-style investigation workflow</li>
-            </ul>
-
-            <p>Skills learned:</p>
-
-            <div class="skill-tags">
-                <span class="skill-tag">Splunk</span>
-                <span class="skill-tag">Linux Logs</span>
-                <span class="skill-tag">SSH Brute Force Detection</span>
-                <span class="skill-tag">SPL Queries</span>
-                <span class="skill-tag">Alert Creation</span>
-                <span class="skill-tag">SOC Triage</span>
-                <span class="skill-tag">Docker</span>
-            </div>
-
-            <div class="project-buttons">
-                <a href="Splunk_SSH_Brute_Force_Detection_Project.pdf" target="_blank">
-                    <button class="nav-button">View PDF</button>
-                </a>
-
-                <a href="Splunk_SSH_Brute_Force_Detection_Project.pdf" download>
-                    <button class="nav-button">Download PDF</button>
-                </a>
-            </div>
-        </div>
-
-        <div class="project-card" data-skills="splunk windows server event logs universal forwarder siem tcp 9997 inputs.conf security logs system logs application logs log forwarding monitoring">
-            <h3>Windows Server Event Log Forwarding Using Splunk</h3>
-            <p class="project-date"><strong>Completed:</strong> May 27, 2026</p>
-
-            <p>
-                This project demonstrates centralized Windows event log collection
-                from a Windows Server 2022 virtual machine into Splunk Enterprise
-                using Splunk Universal Forwarder. The lab focused on forwarding
-                Windows security, system, and application logs into a SIEM environment
-                for visibility and analysis.
-            </p>
-
-            <p>The lab included:</p>
-
-            <ul>
-                <li>Splunk Universal Forwarder installation on Windows Server 2022</li>
-                <li>Receiving indexer configuration using TCP port 9997</li>
-                <li>Windows Event Log collection through inputs.conf</li>
-                <li>Security, System, and Application log forwarding</li>
-                <li>Splunk forwarder service restart and validation</li>
-                <li>Windows event log ingestion verification in Splunk Enterprise</li>
-                <li>Foundational SIEM and Windows monitoring workflow</li>
-            </ul>
-
-            <p>Skills learned:</p>
-
-            <div class="skill-tags">
-                <span class="skill-tag">Splunk Universal Forwarder</span>
-                <span class="skill-tag">Windows Event Logs</span>
-                <span class="skill-tag">SIEM Log Forwarding</span>
-                <span class="skill-tag">Windows Server 2022</span>
-                <span class="skill-tag">inputs.conf</span>
-                <span class="skill-tag">TCP 9997</span>
-                <span class="skill-tag">Security Monitoring</span>
-            </div>
-
-            <div class="project-buttons">
-                <a href="Splunk Windows Server Forwarding Lab.pdf" target="_blank">
-                    <button class="nav-button">View PDF</button>
-                </a>
-
-                <a href="Splunk Windows Server Forwarding Lab.pdf" download>
-                    <button class="nav-button">Download PDF</button>
-                </a>
-            </div>
-        </div>
-
-        <p class="no-results" id="noResults">
-            No projects matched your search.
+        <p>
+            This website is my first personal web project.
+            It is hosted from my Ubuntu home server using Apache inside Docker containers.
+            The site is being built entirely by me as a way to learn web hosting,
+            Linux administration, Docker, networking, and website development.
         </p>
 
-    </section>
+        <p>Skills learned:</p>
 
-    <footer>
-        © 2026 Jake McCarvill
-    </footer>
+        <div class="skill-tags">
+            <span class="skill-tag">Apache</span>
+            <span class="skill-tag">Ubuntu</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Linux Administration</span>
+            <span class="skill-tag">Web Hosting</span>
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag">Basic Networking</span>
+        </div>
 
-    <script>
-        function filterProjects() {
-            const searchInput = document.getElementById("projectSearch").value.toLowerCase();
-            const projectCards = document.querySelectorAll(".project-card");
-            const noResults = document.getElementById("noResults");
-            const resultCount = document.getElementById("resultCount");
+        <p>Future updates will include:</p>
 
-            let visibleCount = 0;
+        <ul>
+            <li>Cybersecurity home lab documentation</li>
+            <li>Docker container projects</li>
+            <li>Minecraft server hosting</li>
+            <li>Linux server management</li>
+            <li>Networking and firewall projects</li>
+            <li>Security monitoring and SIEM projects</li>
+        </ul>
+    </div>
 
-            projectCards.forEach(card => {
-                const cardText = card.innerText.toLowerCase();
-                const cardSkills = card.getAttribute("data-skills").toLowerCase();
+    <div class="project-card" data-skills="active directory windows server 2022 domain controller dns group policy gpo organizational units ou user accounts windows 11 vmware homelab system administration">
+        <h3>Active Directory Homelab Deployment</h3>
+        <p class="project-date"><strong>Completed:</strong> May 12, 2026</p>
 
-                if (cardText.includes(searchInput) || cardSkills.includes(searchInput)) {
-                    card.style.display = "block";
-                    visibleCount++;
-                } else {
-                    card.style.display = "none";
-                }
-            });
+        <p>
+            This project documents the deployment and configuration
+            of Active Directory Domain Services (AD DS) using
+            Windows Server 2022 within a VMware homelab environment.
+        </p>
 
-            if (searchInput === "") {
-                resultCount.textContent = "";
-                noResults.style.display = "none";
+        <p>The lab included:</p>
+
+        <ul>
+            <li>Windows Server 2022 installation</li>
+            <li>Active Directory Domain Services (AD DS)</li>
+            <li>Domain Controller promotion</li>
+            <li>DNS configuration</li>
+            <li>Organizational Unit (OU) management</li>
+            <li>User account creation</li>
+            <li>Windows 11 domain testing</li>
+        </ul>
+
+        <p>Skills learned:</p>
+
+        <div class="skill-tags">
+            <span class="skill-tag">Active Directory</span>
+            <span class="skill-tag">Windows Server 2022</span>
+            <span class="skill-tag">Domain Controllers</span>
+            <span class="skill-tag">DNS</span>
+            <span class="skill-tag">OU Management</span>
+            <span class="skill-tag">User Account Management</span>
+            <span class="skill-tag">VMware Homelab</span>
+        </div>
+
+        <div class="project-buttons">
+            <a href="Active_Directory_Setup.pdf" target="_blank">
+                <button class="nav-button">View PDF</button>
+            </a>
+
+            <a href="Active_Directory_Setup.pdf" download>
+                <button class="nav-button">Download PDF</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="project-card" data-skills="splunk linux ubuntu ssh brute force detection triage siem soc alerting docker authentication logs spl queries security monitoring">
+        <h3>Linux SSH Brute Force Detection and Triage Using Splunk</h3>
+        <p class="project-date"><strong>Completed:</strong> May 20, 2026</p>
+
+        <p>
+            This project demonstrates the creation of a SOC-style monitoring
+            workflow using Splunk Enterprise and Ubuntu Linux.
+            Failed SSH authentication attempts were intentionally generated
+            and forwarded into Splunk for detection, alerting, and triage analysis.
+        </p>
+
+        <p>The lab included:</p>
+
+        <ul>
+            <li>Splunk Enterprise deployment in Docker</li>
+            <li>Linux authentication log ingestion</li>
+            <li>SSH brute force attack simulation</li>
+            <li>Custom SPL detection queries</li>
+            <li>Real-time alert configuration</li>
+            <li>Security event triage and analysis</li>
+            <li>SOC-style investigation workflow</li>
+        </ul>
+
+        <p>Skills learned:</p>
+
+        <div class="skill-tags">
+            <span class="skill-tag">Splunk</span>
+            <span class="skill-tag">Linux Logs</span>
+            <span class="skill-tag">SSH Brute Force Detection</span>
+            <span class="skill-tag">SPL Queries</span>
+            <span class="skill-tag">Alert Creation</span>
+            <span class="skill-tag">SOC Triage</span>
+            <span class="skill-tag">Docker</span>
+        </div>
+
+        <div class="project-buttons">
+            <a href="Splunk_SSH_Brute_Force_Detection_Project.pdf" target="_blank">
+                <button class="nav-button">View PDF</button>
+            </a>
+
+            <a href="Splunk_SSH_Brute_Force_Detection_Project.pdf" download>
+                <button class="nav-button">Download PDF</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="project-card" data-skills="splunk windows server event logs universal forwarder siem tcp 9997 inputs.conf security logs system logs application logs log forwarding monitoring">
+        <h3>Windows Server Event Log Forwarding Using Splunk</h3>
+        <p class="project-date"><strong>Completed:</strong> May 27, 2026</p>
+
+        <p>
+            This project demonstrates centralized Windows event log collection
+            from a Windows Server 2022 virtual machine into Splunk Enterprise
+            using Splunk Universal Forwarder. The lab focused on forwarding
+            Windows security, system, and application logs into a SIEM environment
+            for visibility and analysis.
+        </p>
+
+        <p>The lab included:</p>
+
+        <ul>
+            <li>Splunk Universal Forwarder installation on Windows Server 2022</li>
+            <li>Receiving indexer configuration using TCP port 9997</li>
+            <li>Windows Event Log collection through inputs.conf</li>
+            <li>Security, System, and Application log forwarding</li>
+            <li>Splunk forwarder service restart and validation</li>
+            <li>Windows event log ingestion verification in Splunk Enterprise</li>
+            <li>Foundational SIEM and Windows monitoring workflow</li>
+        </ul>
+
+        <p>Skills learned:</p>
+
+        <div class="skill-tags">
+            <span class="skill-tag">Splunk Universal Forwarder</span>
+            <span class="skill-tag">Windows Event Logs</span>
+            <span class="skill-tag">SIEM Log Forwarding</span>
+            <span class="skill-tag">Windows Server 2022</span>
+            <span class="skill-tag">inputs.conf</span>
+            <span class="skill-tag">TCP 9997</span>
+            <span class="skill-tag">Security Monitoring</span>
+        </div>
+
+        <div class="project-buttons">
+            <a href="Splunk Windows Server Forwarding Lab.pdf" target="_blank">
+                <button class="nav-button">View PDF</button>
+            </a>
+
+            <a href="Splunk Windows Server Forwarding Lab.pdf" download>
+                <button class="nav-button">Download PDF</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="project-card" data-skills="apache docker splunk linux ubuntu web server logging access logs error logs docker logs httpd.conf siem log ingestion troubleshooting curl volume mounts web monitoring">
+
+        <h3>Apache Log Collection for Splunk Using Docker</h3>
+
+        <p class="project-date"><strong>Completed:</strong> June 27, 2026</p>
+
+        <p>
+            This project focused on configuring an Apache web server running inside a Docker
+            container to generate physical access and error log files for future ingestion into
+            Splunk. The lab included modifying Apache's logging configuration, troubleshooting
+            Docker and Apache startup issues, validating log generation, and verifying that web
+            traffic was successfully written to host-mounted log files.
+        </p>
+
+        <p>The lab included:</p>
+
+        <ul>
+            <li>Inspecting Apache logging configuration (httpd.conf)</li>
+            <li>Redirecting Apache logs from Docker stdout/stderr to log files</li>
+            <li>Troubleshooting Apache startup and SSL configuration errors</li>
+            <li>Managing Docker containers and volume mounts</li>
+            <li>Generating HTTP traffic to validate log creation</li>
+            <li>Verifying Apache access and error log generation</li>
+            <li>Preparing web server logs for future Splunk ingestion</li>
+        </ul>
+
+        <p>Skills learned:</p>
+
+        <div class="skill-tags">
+            <span class="skill-tag">Apache</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">Apache Configuration</span>
+            <span class="skill-tag">Web Server Logging</span>
+            <span class="skill-tag">Troubleshooting</span>
+            <span class="skill-tag">Splunk Log Preparation</span>
+            <span class="skill-tag">SIEM Fundamentals</span>
+        </div>
+
+        <div class="project-buttons">
+            <a href="Apache_Log_Lab.pdf" target="_blank">
+                <button class="nav-button">View PDF</button>
+            </a>
+
+            <a href="Apache_Log_Lab.pdf" download>
+                <button class="nav-button">Download PDF</button>
+            </a>
+        </div>
+
+    </div>
+
+    <p class="no-results" id="noResults">
+        No projects matched your search.
+    </p>
+
+</section>
+
+<footer>
+    © 2026 Jake McCarvill
+</footer>
+
+<script>
+    function filterProjects() {
+        const searchInput = document.getElementById("projectSearch").value.toLowerCase();
+        const projectCards = document.querySelectorAll(".project-card");
+        const noResults = document.getElementById("noResults");
+        const resultCount = document.getElementById("resultCount");
+
+        let visibleCount = 0;
+
+        projectCards.forEach(card => {
+            const cardText = card.innerText.toLowerCase();
+            const cardSkills = card.getAttribute("data-skills").toLowerCase();
+
+            if (cardText.includes(searchInput) || cardSkills.includes(searchInput)) {
+                card.style.display = "block";
+                visibleCount++;
             } else {
-                resultCount.textContent = visibleCount + " project(s) found";
-                noResults.style.display = visibleCount === 0 ? "block" : "none";
+                card.style.display = "none";
             }
+        });
+
+        if (searchInput === "") {
+            resultCount.textContent = "";
+            noResults.style.display = "none";
+        } else {
+            resultCount.textContent = visibleCount + " project(s) found";
+            noResults.style.display = visibleCount === 0 ? "block" : "none";
         }
-    </script>
+    }
+</script>
 
 </body>
 </html>
