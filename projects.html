@@ -326,8 +326,9 @@
     <div class="search-box">
         <h3>Search Projects by Skill</h3>
         <p>
-            Search for keywords like Splunk, Docker, Linux, Active Directory,
-            Windows Server, SIEM, SSH, DNS, or log analysis.
+            Search for keywords like Penetration Testing, Splunk, Docker, Linux,
+            Windows Server, Active Directory, Privilege Escalation, SIEM, SSH,
+            Nmap, Gobuster, or Hashcat.
         </p>
 
         <input
@@ -340,173 +341,54 @@
         <div id="resultCount"></div>
     </div>
 
-    <div class="project-card" data-skills="portfolio website apache ubuntu docker linux web hosting html css networking server administration">
-        <h3>Personal Portfolio Website</h3>
+    <div class="project-card" data-skills="penetration testing ethical hacking web application security linux privilege escalation php apache mysql nmap gobuster hashcat reverse shell netcat ssh sudo vim cybersecurity parrot ubuntu enumeration vulnerability assessment defensive analysis logging">
+        <h3>Web Application Penetration Testing Lab</h3>
+        <p class="project-date"><strong>Completed:</strong> July 16, 2026</p>
 
         <p>
-            This website is my first personal web project.
-            It is hosted from my Ubuntu home server using Apache inside Docker containers.
-            The site is being built entirely by me as a way to learn web hosting,
-            Linux administration, Docker, networking, and website development.
-        </p>
-
-        <p>Skills learned:</p>
-
-        <div class="skill-tags">
-            <span class="skill-tag">Apache</span>
-            <span class="skill-tag">Ubuntu</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Linux Administration</span>
-            <span class="skill-tag">Web Hosting</span>
-            <span class="skill-tag">HTML/CSS</span>
-            <span class="skill-tag">Basic Networking</span>
-        </div>
-
-        <p>Future updates will include:</p>
-
-        <ul>
-            <li>Cybersecurity home lab documentation</li>
-            <li>Docker container projects</li>
-            <li>Minecraft server hosting</li>
-            <li>Linux server management</li>
-            <li>Networking and firewall projects</li>
-            <li>Security monitoring and SIEM projects</li>
-        </ul>
-    </div>
-
-    <div class="project-card" data-skills="active directory windows server 2022 domain controller dns group policy gpo organizational units ou user accounts windows 11 vmware homelab system administration">
-        <h3>Active Directory Homelab Deployment</h3>
-        <p class="project-date"><strong>Completed:</strong> May 12, 2026</p>
-
-        <p>
-            This project documents the deployment and configuration
-            of Active Directory Domain Services (AD DS) using
-            Windows Server 2022 within a VMware homelab environment.
+            This project documents a complete end-to-end penetration test against a
+            purposely vulnerable Ubuntu Linux web server. The assessment progressed
+            from reconnaissance and web enumeration to credential discovery, password
+            cracking, initial access through a PHP reverse shell, lateral movement to a
+            local Linux user, and privilege escalation to root through a misconfigured
+            sudo policy.
         </p>
 
         <p>The lab included:</p>
 
         <ul>
-            <li>Windows Server 2022 installation</li>
-            <li>Active Directory Domain Services (AD DS)</li>
-            <li>Domain Controller promotion</li>
-            <li>DNS configuration</li>
-            <li>Organizational Unit (OU) management</li>
-            <li>User account creation</li>
-            <li>Windows 11 domain testing</li>
+            <li>Network reconnaissance and service enumeration using Nmap</li>
+            <li>Web directory and file discovery using Gobuster and Curl</li>
+            <li>Identification and analysis of an exposed database backup file</li>
+            <li>Extraction and cracking of a bcrypt password hash using Hashcat</li>
+            <li>PHP reverse shell upload and remote command execution as www-data</li>
+            <li>Local enumeration and lateral movement to a Linux user account</li>
+            <li>SSH access for a stable, fully interactive terminal session</li>
+            <li>Privilege escalation through a misconfigured sudo Vim permission</li>
+            <li>Defensive comparison of reverse-shell and SSH authentication activity</li>
         </ul>
 
         <p>Skills learned:</p>
 
         <div class="skill-tags">
-            <span class="skill-tag">Active Directory</span>
-            <span class="skill-tag">Windows Server 2022</span>
-            <span class="skill-tag">Domain Controllers</span>
-            <span class="skill-tag">DNS</span>
-            <span class="skill-tag">OU Management</span>
-            <span class="skill-tag">User Account Management</span>
-            <span class="skill-tag">VMware Homelab</span>
+            <span class="skill-tag">Penetration Testing</span>
+            <span class="skill-tag">Linux Enumeration</span>
+            <span class="skill-tag">Web Application Security</span>
+            <span class="skill-tag">Nmap</span>
+            <span class="skill-tag">Gobuster</span>
+            <span class="skill-tag">Hashcat</span>
+            <span class="skill-tag">Reverse Shells</span>
+            <span class="skill-tag">SSH</span>
+            <span class="skill-tag">Privilege Escalation</span>
+            <span class="skill-tag">Defensive Analysis</span>
         </div>
 
         <div class="project-buttons">
-            <a href="Active_Directory_Setup.pdf" target="_blank">
+            <a href="Pentesting_Writeup.pdf" target="_blank">
                 <button class="nav-button">View PDF</button>
             </a>
 
-            <a href="Active_Directory_Setup.pdf" download>
-                <button class="nav-button">Download PDF</button>
-            </a>
-        </div>
-    </div>
-
-    <div class="project-card" data-skills="splunk linux ubuntu ssh brute force detection triage siem soc alerting docker authentication logs spl queries security monitoring">
-        <h3>Linux SSH Brute Force Detection and Triage Using Splunk</h3>
-        <p class="project-date"><strong>Completed:</strong> May 20, 2026</p>
-
-        <p>
-            This project demonstrates the creation of a SOC-style monitoring
-            workflow using Splunk Enterprise and Ubuntu Linux.
-            Failed SSH authentication attempts were intentionally generated
-            and forwarded into Splunk for detection, alerting, and triage analysis.
-        </p>
-
-        <p>The lab included:</p>
-
-        <ul>
-            <li>Splunk Enterprise deployment in Docker</li>
-            <li>Linux authentication log ingestion</li>
-            <li>SSH brute force attack simulation</li>
-            <li>Custom SPL detection queries</li>
-            <li>Real-time alert configuration</li>
-            <li>Security event triage and analysis</li>
-            <li>SOC-style investigation workflow</li>
-        </ul>
-
-        <p>Skills learned:</p>
-
-        <div class="skill-tags">
-            <span class="skill-tag">Splunk</span>
-            <span class="skill-tag">Linux Logs</span>
-            <span class="skill-tag">SSH Brute Force Detection</span>
-            <span class="skill-tag">SPL Queries</span>
-            <span class="skill-tag">Alert Creation</span>
-            <span class="skill-tag">SOC Triage</span>
-            <span class="skill-tag">Docker</span>
-        </div>
-
-        <div class="project-buttons">
-            <a href="Splunk_SSH_Brute_Force_Detection_Project.pdf" target="_blank">
-                <button class="nav-button">View PDF</button>
-            </a>
-
-            <a href="Splunk_SSH_Brute_Force_Detection_Project.pdf" download>
-                <button class="nav-button">Download PDF</button>
-            </a>
-        </div>
-    </div>
-
-    <div class="project-card" data-skills="splunk windows server event logs universal forwarder siem tcp 9997 inputs.conf security logs system logs application logs log forwarding monitoring">
-        <h3>Windows Server Event Log Forwarding Using Splunk</h3>
-        <p class="project-date"><strong>Completed:</strong> May 27, 2026</p>
-
-        <p>
-            This project demonstrates centralized Windows event log collection
-            from a Windows Server 2022 virtual machine into Splunk Enterprise
-            using Splunk Universal Forwarder. The lab focused on forwarding
-            Windows security, system, and application logs into a SIEM environment
-            for visibility and analysis.
-        </p>
-
-        <p>The lab included:</p>
-
-        <ul>
-            <li>Splunk Universal Forwarder installation on Windows Server 2022</li>
-            <li>Receiving indexer configuration using TCP port 9997</li>
-            <li>Windows Event Log collection through inputs.conf</li>
-            <li>Security, System, and Application log forwarding</li>
-            <li>Splunk forwarder service restart and validation</li>
-            <li>Windows event log ingestion verification in Splunk Enterprise</li>
-            <li>Foundational SIEM and Windows monitoring workflow</li>
-        </ul>
-
-        <p>Skills learned:</p>
-
-        <div class="skill-tags">
-            <span class="skill-tag">Splunk Universal Forwarder</span>
-            <span class="skill-tag">Windows Event Logs</span>
-            <span class="skill-tag">SIEM Log Forwarding</span>
-            <span class="skill-tag">Windows Server 2022</span>
-            <span class="skill-tag">inputs.conf</span>
-            <span class="skill-tag">TCP 9997</span>
-            <span class="skill-tag">Security Monitoring</span>
-        </div>
-
-        <div class="project-buttons">
-            <a href="Splunk Windows Server Forwarding Lab.pdf" target="_blank">
-                <button class="nav-button">View PDF</button>
-            </a>
-
-            <a href="Splunk Windows Server Forwarding Lab.pdf" download>
+            <a href="Pentesting_Writeup.pdf" download>
                 <button class="nav-button">Download PDF</button>
             </a>
         </div>
@@ -561,6 +443,178 @@
             </a>
         </div>
 
+    </div>
+
+    <div class="project-card" data-skills="splunk windows server event logs universal forwarder siem tcp 9997 inputs.conf security logs system logs application logs log forwarding monitoring">
+        <h3>Windows Server Event Log Forwarding Using Splunk</h3>
+        <p class="project-date"><strong>Completed:</strong> May 27, 2026</p>
+
+        <p>
+            This project demonstrates centralized Windows event log collection
+            from a Windows Server 2022 virtual machine into Splunk Enterprise
+            using Splunk Universal Forwarder. The lab focused on forwarding
+            Windows security, system, and application logs into a SIEM environment
+            for visibility and analysis.
+        </p>
+
+        <p>The lab included:</p>
+
+        <ul>
+            <li>Splunk Universal Forwarder installation on Windows Server 2022</li>
+            <li>Receiving indexer configuration using TCP port 9997</li>
+            <li>Windows Event Log collection through inputs.conf</li>
+            <li>Security, System, and Application log forwarding</li>
+            <li>Splunk forwarder service restart and validation</li>
+            <li>Windows event log ingestion verification in Splunk Enterprise</li>
+            <li>Foundational SIEM and Windows monitoring workflow</li>
+        </ul>
+
+        <p>Skills learned:</p>
+
+        <div class="skill-tags">
+            <span class="skill-tag">Splunk Universal Forwarder</span>
+            <span class="skill-tag">Windows Event Logs</span>
+            <span class="skill-tag">SIEM Log Forwarding</span>
+            <span class="skill-tag">Windows Server 2022</span>
+            <span class="skill-tag">inputs.conf</span>
+            <span class="skill-tag">TCP 9997</span>
+            <span class="skill-tag">Security Monitoring</span>
+        </div>
+
+        <div class="project-buttons">
+            <a href="Splunk Windows Server Forwarding Lab.pdf" target="_blank">
+                <button class="nav-button">View PDF</button>
+            </a>
+
+            <a href="Splunk Windows Server Forwarding Lab.pdf" download>
+                <button class="nav-button">Download PDF</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="project-card" data-skills="splunk linux ubuntu ssh brute force detection triage siem soc alerting docker authentication logs spl queries security monitoring">
+        <h3>Linux SSH Brute Force Detection and Triage Using Splunk</h3>
+        <p class="project-date"><strong>Completed:</strong> May 20, 2026</p>
+
+        <p>
+            This project demonstrates the creation of a SOC-style monitoring
+            workflow using Splunk Enterprise and Ubuntu Linux.
+            Failed SSH authentication attempts were intentionally generated
+            and forwarded into Splunk for detection, alerting, and triage analysis.
+        </p>
+
+        <p>The lab included:</p>
+
+        <ul>
+            <li>Splunk Enterprise deployment in Docker</li>
+            <li>Linux authentication log ingestion</li>
+            <li>SSH brute force attack simulation</li>
+            <li>Custom SPL detection queries</li>
+            <li>Real-time alert configuration</li>
+            <li>Security event triage and analysis</li>
+            <li>SOC-style investigation workflow</li>
+        </ul>
+
+        <p>Skills learned:</p>
+
+        <div class="skill-tags">
+            <span class="skill-tag">Splunk</span>
+            <span class="skill-tag">Linux Logs</span>
+            <span class="skill-tag">SSH Brute Force Detection</span>
+            <span class="skill-tag">SPL Queries</span>
+            <span class="skill-tag">Alert Creation</span>
+            <span class="skill-tag">SOC Triage</span>
+            <span class="skill-tag">Docker</span>
+        </div>
+
+        <div class="project-buttons">
+            <a href="Splunk_SSH_Brute_Force_Detection_Project.pdf" target="_blank">
+                <button class="nav-button">View PDF</button>
+            </a>
+
+            <a href="Splunk_SSH_Brute_Force_Detection_Project.pdf" download>
+                <button class="nav-button">Download PDF</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="project-card" data-skills="active directory windows server 2022 domain controller dns group policy gpo organizational units ou user accounts windows 11 vmware homelab system administration">
+        <h3>Active Directory Homelab Deployment</h3>
+        <p class="project-date"><strong>Completed:</strong> May 12, 2026</p>
+
+        <p>
+            This project documents the deployment and configuration
+            of Active Directory Domain Services (AD DS) using
+            Windows Server 2022 within a VMware homelab environment.
+        </p>
+
+        <p>The lab included:</p>
+
+        <ul>
+            <li>Windows Server 2022 installation</li>
+            <li>Active Directory Domain Services (AD DS)</li>
+            <li>Domain Controller promotion</li>
+            <li>DNS configuration</li>
+            <li>Organizational Unit (OU) management</li>
+            <li>User account creation</li>
+            <li>Windows 11 domain testing</li>
+        </ul>
+
+        <p>Skills learned:</p>
+
+        <div class="skill-tags">
+            <span class="skill-tag">Active Directory</span>
+            <span class="skill-tag">Windows Server 2022</span>
+            <span class="skill-tag">Domain Controllers</span>
+            <span class="skill-tag">DNS</span>
+            <span class="skill-tag">OU Management</span>
+            <span class="skill-tag">User Account Management</span>
+            <span class="skill-tag">VMware Homelab</span>
+        </div>
+
+        <div class="project-buttons">
+            <a href="Active_Directory_Setup.pdf" target="_blank">
+                <button class="nav-button">View PDF</button>
+            </a>
+
+            <a href="Active_Directory_Setup.pdf" download>
+                <button class="nav-button">Download PDF</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="project-card" data-skills="portfolio website apache ubuntu docker linux web hosting html css networking server administration">
+        <h3>Personal Portfolio Website</h3>
+
+        <p>
+            This website is my first personal web project.
+            It is hosted from my Ubuntu home server using Apache inside Docker containers.
+            The site is being built entirely by me as a way to learn web hosting,
+            Linux administration, Docker, networking, and website development.
+        </p>
+
+        <p>Skills learned:</p>
+
+        <div class="skill-tags">
+            <span class="skill-tag">Apache</span>
+            <span class="skill-tag">Ubuntu</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Linux Administration</span>
+            <span class="skill-tag">Web Hosting</span>
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag">Basic Networking</span>
+        </div>
+
+        <p>Future updates will include:</p>
+
+        <ul>
+            <li>Cybersecurity home lab documentation</li>
+            <li>Docker container projects</li>
+            <li>Minecraft server hosting</li>
+            <li>Linux server management</li>
+            <li>Networking and firewall projects</li>
+            <li>Security monitoring and SIEM projects</li>
+        </ul>
     </div>
 
     <p class="no-results" id="noResults">
